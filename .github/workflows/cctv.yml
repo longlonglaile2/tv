@@ -1,8 +1,11 @@
-﻿name: itvlist
+name: cctv
 
 on:
-  schedule:
-    - cron: '0 2,6,10,14,18,22 * * *'
+  #schedule:
+    #- cron: '0 13 * * *'
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -23,19 +26,22 @@ jobs:
       - name: Run itv
         run: python ${{ github.workspace }}/itv.py
 
-      - name: Run cctv
-        run: python ${{ github.workspace }}/cctv.py
+      - name: Run itvtest
+        run: python ${{ github.workspace }}/itvtest.py
+
+      #- name: Run cctv
+        #run: python ${{ github.workspace }}/cctv.py
         
-      - name: Run weishi
-        run: python ${{ github.workspace }}/weishi.py
+      #- name: Run weishi
+        #run: python ${{ github.workspace }}/weishi.py
         
-      - name: Run qita
-        run: python ${{ github.workspace }}/qita.py
+      #- name: Run qita
+        #run: python ${{ github.workspace }}/qita.py
         
       - name: 提交更改
         run: |
-          git config --local user.email "w1198479779@gmail.com"
-          git config --local user.name "longlonglaile1"
+          git config --local user.email "longlonglaile1@126.com"
+          git config --local user.name "longlonglaile2"
           git add .
           git commit *.txt -m "Add generated file"
           git commit *.m3u -m "Add generated file"
