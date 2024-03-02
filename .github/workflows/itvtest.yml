@@ -41,7 +41,7 @@ python版本: 3.x
       - 名字: 提交更改
 奔跑: |
 git配置-本地用户。电子邮件“longlonglaile2@126.com“
-git配置-本地用户名“longlonglaile1“
+git配置-本地用户名“longlonglaile2“
 git添加。
 git提交*。txt -m“添加生成的文件”
 git commit *。m3u-m“添加生成的文件“
