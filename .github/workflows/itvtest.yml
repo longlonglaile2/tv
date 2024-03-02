@@ -1,0 +1,49 @@
+名字: ITV测试
+
+在:
+  #日程安排:
+    #-cron:“0 21 * * *”
+  #推送:
+    #分支机构:
+      #-主要
+
+工作:
+建设:
+连续运行: Ubuntu-最新版
+
+步伐:
+      - 名字: 结账代码
+使用: 动作/签出@v2
+    
+      - 名字: 设置Python
+使用: 操作/设置-python@v2
+随着:
+python版本: 3.x
+
+      - 名字: 安装依赖项
+奔跑: pip安装selenium请求期货事件小程序
+
+      - 名字: 运行itv
+奔跑: python ${{github.workspace}}/itv.py
+
+      - 名字: 运行itvtest
+奔跑: python ${{github.workspace}}/itvtest.py
+
+      #-名称:运行cctv
+        # run:python $ { { github . workspace } }/CCTV . py
+        
+      #-姓名:润卫仕
+        # run:python $ { { github . workspace } }/weishi . py
+        
+      #-姓名:润琪塔
+        # run:python $ { { github . workspace } }/qita . py
+        
+      - 名字: 提交更改
+奔跑: |
+git配置-本地用户。电子邮件“ssili @ 126.com“
+git配置-本地用户名“ssili126“
+git添加。
+git提交*。txt -m“添加生成的文件”
+git commit *。m3u-m“添加生成的文件“
+#git pull - rebase
+git推出
